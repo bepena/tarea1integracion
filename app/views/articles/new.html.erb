@@ -1,0 +1,23 @@
+
+<h1> Crear Noticia </h1>
+
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :headline %><br>
+    <%= form.text_field :headline %>
+  </p>
+
+  <p>
+    <%= form.label :lead %><br>
+    <%= form.text_area :lead %>
+  </p>
+
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
